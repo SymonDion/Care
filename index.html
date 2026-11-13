@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HealthWise Hub provides accessible health education, wellness guidance, nutrition insights and preventive care resources for healthier lives worldwide.">
+  <meta name="theme-color" content="#087f8c">
+  <meta property="og:title" content="HealthWise Hub | Better Health, Brighter Living">
+  <meta property="og:description" content="Explore trusted health education and everyday wellness resources for everyone, everywhere.">
+  <title>HealthWise Hub | Better Health, Brighter Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Small fallback styles so the page remains readable if the stylesheet is missing. */
+    :root{--teal:#087f8c;--navy:#102b3f;--ink:#183447;--muted:#607786;--pale:#eef8f7;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"DM Sans",Arial,sans-serif;color:var(--ink);background:#f8fbfc}
+    a{color:inherit;text-decoration:none}button,input{font:inherit}.container{width:min(1160px,92%);margin:auto}
+    .topbar{background:#102b3f;color:#dcebef;padding:9px 0;font-size:13px}.topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(14px);border-bottom:1px solid #e4eeee}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:10px;font:800 22px Manrope,sans-serif;color:var(--navy)}
+    .brand-mark{width:40px;height:40px;border-radius:14px;background:linear-gradient(135deg,#0a9b9a,#65c8a7);display:grid;place-items:center;color:white;font-size:22px}
+    .navlinks{display:flex;align-items:center;gap:24px;color:#476171;font-size:14px;font-weight:700}.navlinks a:hover{color:var(--teal)}
+    .nav-actions{display:flex;gap:10px;align-items:center}.btn{border:0;border-radius:999px;padding:13px 20px;background:var(--teal);color:white;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.25s}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 12px 25px #087f8c30}.btn.light{background:#e7f5f3;color:var(--teal)}.menu-btn{display:none;border:0;background:#eaf5f4;border-radius:12px;padding:10px;font-size:20px}
+    .hero{overflow:hidden;position:relative;padding:88px 0 82px;background:radial-gradient(circle at 85% 25%,#bdece2 0,transparent 28%),linear-gradient(120deg,#f0fbf9,#f6fbff 65%,#e8f4f7)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--teal);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+    h1,h2,h3{font-family:Manrope,sans-serif;color:var(--navy)}h1{font-size:clamp(42px,5.2vw,68px);line-height:1.08;letter-spacing:-.045em;margin:18px 0}
+    .gradient-text{color:var(--teal)}.hero p{font-size:18px;line-height:1.8;color:#597180;max-width:610px}.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .hero-note{margin-top:24px;font-size:13px;color:#6b8290}.hero-art{min-height:410px;position:relative;display:grid;place-items:center}
+    .globe{width:min(360px,80vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 28%,#c8fff0,#5cc6b3 45%,#087f8c 78%);box-shadow:inset -25px -25px 55px #064b5c55,0 35px 70px #087f8c30;position:relative;display:grid;place-items:center;color:white;font-size:110px;animation:float 6s ease-in-out infinite}
+    .globe:before,.globe:after{content:"";position:absolute;border:1px solid #ffffff80;border-radius:50%;inset:12% 28%;transform:rotate(35deg)}.globe:after{inset:28% 8%;transform:rotate(-28deg)}
+    .float-card{position:absolute;background:white;border:1px solid #e6f0ef;border-radius:18px;padding:15px 18px;box-shadow:0 18px 45px #1d53601b;font-weight:800;color:var(--navy);animation:float 5s ease-in-out infinite}
+    .float-card small{display:block;color:#78909c;font-weight:600;margin-top:4px}.fc-one{top:35px;left:0}.fc-two{right:0;bottom:45px;animation-delay:1s}
+    @keyframes float{50%{transform:translateY(-13px)}}@keyframes reveal{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+    section{padding:78px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 38px}.section-head h2{font-size:clamp(30px,4vw,42px);margin:12px 0}.section-head p{color:var(--muted);line-height:1.75}
+    .stats{background:white;border-bottom:1px solid #eaf0f1}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}.stat strong{display:block;font:800 32px Manrope;color:var(--teal)}.stat span{font-size:13px;color:var(--muted)}
+    .topic-tools{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}.topic-tools input,.topic-tools select{border:1px solid #dbe8e8;border-radius:13px;padding:13px 16px;background:white;min-width:210px;outline-color:var(--teal)}
+    .topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.topic-card{background:white;border:1px solid #e6eeee;border-radius:20px;padding:23px;transition:.25s;box-shadow:0 8px 25px #173d4d08}.topic-card:hover{transform:translateY(-6px);box-shadow:0 18px 35px #173d4d12}
+    .topic-icon{width:48px;height:48px;border-radius:15px;background:#e8f7f4;display:grid;place-items:center;font-size:25px}.topic-card h3{font-size:18px;margin:16px 0 8px}.topic-card p{color:var(--muted);font-size:14px;line-height:1.7}.topic-card a{color:var(--teal);font-weight:800;font-size:13px}
+    .wellness{background:#eff8f6}.well-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.well-card{background:white;padding:25px;border-radius:20px}.well-card .emoji{font-size:30px}.well-card h3{margin:12px 0 8px}.well-card p{color:var(--muted);line-height:1.7;font-size:14px}
+    .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.feature-panel{background:linear-gradient(145deg,#0b7d89,#14536c);color:white;border-radius:28px;padding:35px;min-height:300px}.feature-panel h3{color:white;font-size:27px}.feature-panel p{line-height:1.8;color:#e0f5f1}.feature-list{display:grid;gap:15px}.feature-item{display:flex;gap:14px;align-items:flex-start}.feature-item b{display:block;color:var(--navy);margin-bottom:5px}.feature-item span{color:var(--muted);font-size:14px;line-height:1.6}
+    .resources{background:#f4f8fb}.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.resource{background:white;border-radius:18px;padding:22px;border:1px solid #e5edef}.resource h3{font-size:17px}.resource p{color:var(--muted);font-size:14px;line-height:1.7}.resource a{color:var(--teal);font-weight:800}
+    .faq-list{max-width:820px;margin:auto;display:grid;gap:12px}.faq-list details{background:white;border:1px solid #e4eded;border-radius:15px;padding:18px 20px}.faq-list summary{font-weight:800;color:var(--navy);cursor:pointer}.faq-list p{color:var(--muted);line-height:1.7}
+    .newsletter{background:linear-gradient(120deg,#0b7584,#123f59);color:white;border-radius:28px;padding:42px;display:flex;align-items:center;justify-content:space-between;gap:25px}.newsletter h2{color:white;margin:0 0 8px}.newsletter p{color:#d8eeee;margin:0}.newsletter form{display:flex;gap:8px;min-width:min(420px,100%)}.newsletter input{flex:1;min-width:0;border:0;border-radius:999px;padding:14px 17px}
+    footer{background:#102b3f;color:#d3e3e9;padding:55px 0 25px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px}.footer-grid h3{color:white;font-size:15px}.footer-grid p,.footer-grid a{color:#afc4ce;font-size:13px;line-height:2;display:block}.copyright{border-top:1px solid #ffffff20;margin-top:35px;padding-top:20px;color:#9bb4c0;font-size:12px}
+    .disclaimer{background:#fff8e9;border:1px solid #f2e3bd;border-radius:14px;padding:17px;color:#745a24;font-size:13px;line-height:1.7}
+    .reveal{animation:reveal .8s both}.hidden{display:none!important}
+    @media(max-width:900px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:22px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid #e4eeee}.navlinks.open{display:flex}.menu-btn{display:block}.nav-actions .btn{display:none}.hero-grid,.feature-grid{grid-template-columns:1fr}.hero-art{min-height:340px}.topic-grid,.well-grid,.resource-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.hero{padding:60px 0}.hero p{font-size:16px}.hero-art{min-height:290px}.globe{width:245px;font-size:75px}.fc-one{left:-5px}.fc-two{right:-5px}.stats-grid{grid-template-columns:repeat(2,1fr);row-gap:25px}.topic-grid,.well-grid,.resource-grid{grid-template-columns:1fr}.newsletter{padding:28px;display:block}.newsletter form{margin-top:20px;min-width:0;flex-direction:column}.newsletter form .btn{width:100%}.footer-grid{grid-template-columns:1fr 1fr}section{padding:58px 0}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>🌍 Health knowledge for every community</span><span>Learn • Prevent • Thrive 💚</span></div></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home"><span class="brand-mark">✚</span> HealthWise <span class="gradient-text">Hub</span></a>
+      <nav class="navlinks" id="navlinks">
+        <a href="#home">Home</a><a href="#topics">Health Topics</a><a href="#wellness">Wellness</a><a href="#resources">Resources</a><a href="#about">About</a><a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions"><a class="btn" href="#topics">Explore Resources ↗</a><button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">💚 Your journey to better health starts here</span>
+          <h1>Your Trusted Partner for <span class="gradient-text">Better Health</span> and Wellness</h1>
+          <p>Evidence-informed health information, wellness resources, fitness guidance, nutrition insights and preventive-care education designed to support healthier lives — wherever you are in the world.</p>
+          <div class="hero-buttons"><a class="btn" href="#topics">Explore Health Resources →</a><a class="btn light" href="#wellness">✨ Start Your Wellness</a></div>
+          <div class="hero-note">🌱 Understand your health. Build healthy habits. Make informed choices.</div>
+        </div>
+        <div class="hero-art" aria-label="Decorative health and wellness globe">
+          <div class="globe">🌍</div>
+          <div class="float-card fc-one">🩺 Health education<small>Knowledge empowers choices</small></div>
+          <div class="float-card fc-two">🥗 Everyday wellness<small>Small habits, lasting impact</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats"><div class="container stats-grid">
+      <div class="stat"><strong>🌎 Global</strong><span>Health perspectives</span></div>
+      <div class="stat"><strong>📚 30+</strong><span>Education topic areas</span></div>
+      <div class="stat"><strong>💚 24/7</strong><span>Learn at your own pace</span></div>
+      <div class="stat"><strong>🧭 All ages</strong><span>Life-stage information</span></div>
+    </div></section>
+
+    <section id="topics"><div class="container">
+      <div class="section-head"><span class="eyebrow">📖 Explore the knowledge library</span><h2>Health Topics for Every Stage of Life</h2><p>Explore introductory information about common health conditions, prevention, healthy living and community health. Use the search to find a topic that matters to you.</p></div>
+      <div class="topic-tools"><input id="topicSearch" type="search" placeholder="🔎 Search health topics..." aria-label="Search health topics"><select id="topicFilter" aria-label="Filter topics"><option value="all">All topic areas</option><option value="conditions">Conditions</option><option value="prevention">Prevention</option><option value="wellness">Wellness</option><option value="life">Life stages</option><option value="community">Community health</option></select></div>
+      <div class="topic-grid" id="topicGrid">
+        <article class="topic-card" data-category="conditions"><div class="topic-icon">❤️</div><h3>Heart & Circulatory Health</h3><p>Learn about blood pressure, cholesterol, heart disease, stroke warning signs and ways to support cardiovascular health.</p><a href="https://www.who.int/health-topics/cardiovascular-diseases" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="conditions"><div class="topic-icon">🩸</div><h3>Diabetes & Blood Sugar</h3><p>Understand diabetes types, risk factors, blood glucose, complications and the importance of ongoing clinical care.</p><a href="https://www.who.int/health-topics/diabetes" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="conditions"><div class="topic-icon">🫁</div><h3>Respiratory Health</h3><p>Discover information about asthma, chronic lung conditions, pneumonia, tuberculosis and protecting your lungs.</p><a href="https://www.who.int/health-topics/respiratory-diseases" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="conditions"><div class="topic-icon">🎗️</div><h3>Cancer Awareness</h3><p>Learn about cancer prevention, screening, early detection, treatment conversations and support for patients.</p><a href="https://www.who.int/health-topics/cancer" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="conditions"><div class="topic-icon">🧠</div><h3>Mental Health</h3><p>Explore emotional wellbeing, stress, anxiety, depression, support networks and when to seek professional help.</p><a href="https://www.who.int/health-topics/mental-health" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="conditions"><div class="topic-icon">🦟</div><h3>Malaria & Mosquito-borne Illness</h3><p>Understand malaria prevention, mosquito control, symptoms that need urgent assessment and community protection.</p><a href="https://www.who.int/health-topics/malaria" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="conditions"><div class="topic-icon">🧬</div><h3>HIV & Sexual Health</h3><p>Find non-judgmental education about HIV prevention, testing, treatment, reproductive health and safer relationships.</p><a href="https://www.who.int/health-topics/hiv-aids" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="conditions"><div class="topic-icon">🧫</div><h3>Tuberculosis & Infections</h3><p>Learn about tuberculosis, common infectious diseases, infection prevention, testing and treatment adherence.</p><a href="https://www.who.int/health-topics/tuberculosis" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="conditions"><div class="topic-icon">🦠</div><h3>Hepatitis & Liver Health</h3><p>Understand viral hepatitis, vaccination, testing, liver health and ways to reduce transmission risks.</p><a href="https://www.who.int/health-topics/hepatitis" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="prevention"><div class="topic-icon">💉</div><h3>Vaccines & Immunisation</h3><p>Discover how vaccines help protect individuals and communities, and why recommended schedules matter.</p><a href="https://www.who.int/health-topics/vaccines-and-immunization" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="prevention"><div class="topic-icon">🧼</div><h3>Hygiene & Infection Prevention</h3><p>Explore hand hygiene, safe food practices, sanitation, clean water and everyday steps that reduce infection risks.</p><a href="https://www.who.int/health-topics/infection-prevention-and-control" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="wellness"><div class="topic-icon">🥗</div><h3>Nutrition & Healthy Eating</h3><p>Learn about balanced diets, food groups, micronutrients, food safety and healthy eating across different ages.</p><a href="https://www.who.int/health-topics/healthy-diet" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="wellness"><div class="topic-icon">🏃</div><h3>Physical Activity & Fitness</h3><p>Explore the benefits of movement, strength, flexibility, active transport and adapting activity to your abilities.</p><a href="https://www.who.int/health-topics/physical-activity" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="wellness"><div class="topic-icon">😴</div><h3>Sleep & Recovery</h3><p>Understand healthy sleep routines, rest, recovery and factors that can affect sleep quality.</p><a href="https://medlineplus.gov/sleepdisorders.html" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="wellness"><div class="topic-icon">💧</div><h3>Hydration & Daily Habits</h3><p>Learn why water matters, how needs vary and how to build practical healthy routines.</p><a href="https://medlineplus.gov/nutrition.html" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="life"><div class="topic-icon">🤰</div><h3>Maternal & Pregnancy Health</h3><p>Explore antenatal care, pregnancy wellbeing, birth preparedness, warning signs and postnatal support.</p><a href="https://www.who.int/health-topics/maternal-health" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="life"><div class="topic-icon">👶</div><h3>Newborn & Child Health</h3><p>Learn about newborn care, child development, nutrition, immunisation and routine health visits.</p><a href="https://www.who.int/health-topics/child-health" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="life"><div class="topic-icon">🧑‍🎓</div><h3>Adolescent Health</h3><p>Find information on physical development, mental wellbeing, nutrition, safety and healthy choices for young people.</p><a href="https://www.who.int/health-topics/adolescent-health" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="life"><div class="topic-icon">👵</div><h3>Healthy Ageing</h3><p>Explore healthy ageing, independence, social connection, prevention and support for older adults.</p><a href="https://www.who.int/health-topics/ageing" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="community"><div class="topic-icon">🌿</div><h3>Environment & Public Health</h3><p>Understand air quality, climate, sanitation, safe water and how surroundings influence health.</p><a href="https://www.who.int/health-topics/environmental-health" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="community"><div class="topic-icon">🦽</div><h3>Disability & Rehabilitation</h3><p>Learn about inclusion, rehabilitation, assistive technology and accessible health services.</p><a href="https://www.who.int/health-topics/rehabilitation" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="community"><div class="topic-icon">🚑</div><h3>First Aid & Emergencies</h3><p>Understand basic emergency preparedness and why immediate local emergency support can be lifesaving.</p><a href="https://www.who.int/health-topics/emergencies" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="conditions"><div class="topic-icon">🦴</div><h3>Bone & Joint Health</h3><p>Explore bone strength, arthritis, back pain prevention, movement and when pain needs medical assessment.</p><a href="https://medlineplus.gov/bonesjointsandmuscles.html" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="conditions"><div class="topic-icon">👁️</div><h3>Eye & Vision Health</h3><p>Learn about vision checks, eye protection, common eye conditions and symptoms that need prompt attention.</p><a href="https://www.who.int/health-topics/blindness-and-vision-loss" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="conditions"><div class="topic-icon">🦷</div><h3>Oral & Dental Health</h3><p>Discover practical oral hygiene, dental prevention, gum health and access to oral healthcare.</p><a href="https://www.who.int/health-topics/oral-health" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="prevention"><div class="topic-icon">🩻</div><h3>Screening & Preventive Care</h3><p>Understand routine check-ups, screening discussions and prevention plans suited to age and personal risk.</p><a href="https://www.who.int/health-topics/disease-prevention" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="wellness"><div class="topic-icon">🚭</div><h3>Tobacco, Alcohol & Substance Use</h3><p>Explore health risks, prevention, support options and how to seek help without stigma.</p><a href="https://www.who.int/health-topics/tobacco" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+        <article class="topic-card" data-category="community"><div class="topic-icon">🌍</div><h3>Global & Community Health</h3><p>Learn how health systems, health equity, outbreaks and community action shape population wellbeing.</p><a href="https://www.afro.who.int/health-topics" target="_blank" rel="noopener">Explore trusted information ↗</a></article>
+      </div>
+      <p id="noTopics" class="hidden" style="text-align:center;color:#607786;padding:25px">No topics match your search. Try another keyword.</p>
+    </div></section>
+
+    <section class="wellness" id="wellness"><div class="container">
+      <div class="section-head"><span class="eyebrow">✨ Small steps matter</span><h2>Build Your Everyday Wellness</h2><p>Healthy living is not about perfection. Start with realistic habits, adapt them to your circumstances and seek professional advice when you need it.</p></div>
+      <div class="well-grid">
+        <article class="well-card"><div class="emoji">🥦</div><h3>Eat a Variety of Foods</h3><p>Include a variety of vegetables, fruits, legumes, whole grains and suitable protein sources. Choose safe, balanced meals that fit your needs and local food options.</p></article>
+        <article class="well-card"><div class="emoji">🚶</div><h3>Move More Often</h3><p>Walking, dancing, gardening, cycling and active play can all contribute to movement. Begin at a comfortable level and increase gradually.</p></article>
+        <article class="well-card"><div class="emoji">💤</div><h3>Prioritise Rest</h3><p>Build a calming sleep routine, keep a regular schedule when possible and speak with a healthcare professional about persistent sleep difficulties.</p></article>
+        <article class="well-card"><div class="emoji">🧘</div><h3>Care for Your Mind</h3><p>Make room for relaxation, supportive relationships and activities you enjoy. Reach out to trusted people or qualified professionals when struggling.</p></article>
+        <article class="well-card"><div class="emoji">🩺</div><h3>Keep Up With Healthcare</h3><p>Ask about appropriate check-ups, vaccinations, screenings and follow-up care based on your age, history and local guidance.</p></article>
+        <article class="well-card"><div class="emoji">🤝</div><h3>Stay Connected</h3><p>Community, family, friends and peer support can strengthen wellbeing. Offer kindness and seek support when you need it.</p></article>
+      </div>
+    </div></section>
+
+    <section id="about"><div class="container feature-grid">
+      <div class="feature-panel"><span class="eyebrow" style="color:#b9fff0">🌱 About HealthWise Hub</span><h3>Knowledge that helps people make informed health decisions.</h3><p>HealthWise Hub is an educational resource designed to make health and wellness information easier to explore. We aim to encourage health literacy, prevention, informed conversations and respect for different communities and life experiences.</p><p>Our content is educational and should be used alongside advice from qualified healthcare professionals and relevant local health authorities.</p></div>
+      <div class="feature-list">
+        <div class="feature-item"><span>🌍</span><div><b>A global perspective</b><span>Health topics affect communities differently. Explore trusted international resources and local guidance.</span></div></div>
+        <div class="feature-item"><span>🔎</span><div><b>Clear, accessible learning</b><span>Find introductory explanations and links to organisations that publish detailed health information.</span></div></div>
+        <div class="feature-item"><span>🛡️</span><div><b>Prevention and awareness</b><span>Build knowledge that can support prevention, early conversations and appropriate care-seeking.</span></div></div>
+        <div class="feature-item"><span>💚</span><div><b>Respect for every person</b><span>Health information should be inclusive, understandable and free from stigma.</span></div></div>
+      </div>
+    </div></section>
+
+    <section class="resources" id="resources"><div class="container">
+      <div class="section-head"><span class="eyebrow">🔗 Trusted learning destinations</span><h2>Explore Authoritative Health Resources</h2><p>Use recognised health organisations for detailed guidance, current recommendations and country-specific information.</p></div>
+      <div class="resource-grid">
+        <article class="resource"><h3>🌐 World Health Organization</h3><p>Global health topics, fact sheets, public health guidance and information about health programmes.</p><a href="https://www.who.int/health-topics" target="_blank" rel="noopener">Visit WHO ↗</a></article>
+        <article class="resource"><h3>🌍 WHO Regional Office for Africa</h3><p>Regional health information, disease priorities and public health updates relevant to African communities.</p><a href="https://www.afro.who.int/health-topics" target="_blank" rel="noopener">Visit WHO Africa ↗</a></article>
+        <article class="resource"><h3>🇲🇼 Malawi Ministry of Health</h3><p>For national health programmes, local public health announcements and official Malawi health information.</p><a href="https://health.gov.mw/" target="_blank" rel="noopener">Visit Malawi Health ↗</a></article>
+        <article class="resource"><h3>🧑‍⚕️ MedlinePlus</h3><p>Accessible health information from the US National Library of Medicine, including conditions and medicines.</p><a href="https://medlineplus.gov/" target="_blank" rel="noopener">Visit MedlinePlus ↗</a></article>
+        <article class="resource"><h3>🏥 Centers for Disease Control</h3><p>Public health information, disease prevention resources, travel health and health data.</p><a href="https://www.cdc.gov/" target="_blank" rel="noopener">Visit CDC ↗</a></article>
+        <article class="resource"><h3>🧒 UNICEF</h3><p>Child health, nutrition, immunisation, maternal wellbeing and support for children and families.</p><a href="https://www.unicef.org/health" target="_blank" rel="noopener">Visit UNICEF ↗</a></article>
+      </div>
+    </div></section>
+
+    <section id="faq"><div class="container"><div class="section-head"><span class="eyebrow">❔ Helpful answers</span><h2>Frequently Asked Questions</h2><p>Important things to know before using this health education website.</p></div>
+      <div class="faq-list">
+        <details><summary>Is HealthWise Hub a hospital or medical clinic?</summary><p>No. HealthWise Hub is an educational website. It does not provide clinical examinations, diagnosis, prescriptions or emergency services.</p></details>
+        <details><summary>Can I use this website to diagnose an illness?</summary><p>No. Website information cannot determine what condition you have. If you have symptoms or health concerns, contact a qualified healthcare professional for an appropriate assessment.</p></details>
+        <details><summary>Where does the health information come from?</summary><p>This website provides introductory educational summaries and links to recognised health organisations. Always check the linked source for the latest recommendations and consult your local health authority.</p></details>
+        <details><summary>What should I do in a medical emergency?</summary><p>Contact your local emergency service or go to the nearest appropriate emergency facility immediately. Do not delay urgent care to search online.</p></details>
+        <details><summary>Is the information suitable for every country?</summary><p>Health recommendations, available services and disease risks vary by country and individual circumstances. Use local health authority guidance where it differs from general information.</p></details>
+      </div>
+    </div></section>
+
+    <section><div class="container"><div class="newsletter">
+      <div><h2>💌 Keep learning. Keep thriving.</h2><p>Join our wellness community for educational updates and healthy-living ideas.</p></div>
+      <form id="newsletterForm"><input type="email" id="newsletterEmail" placeholder="Your email address" aria-label="Your email address" required><button class="btn" type="submit">Join the community →</button></form>
+    </div></div></section>
+
+    <section style="padding-top:0"><div class="container"><div class="disclaimer"><strong>⚠️ Important health disclaimer:</strong> HealthWise Hub is for general educational and informational purposes only. It is not a substitute for professional medical advice, diagnosis or treatment. Never ignore or delay seeking professional care because of something you have read here. In an emergency, contact local emergency services or seek urgent medical attention. Information may not reflect the latest guidance; check authoritative sources and local health authorities.</div></div></section>
+  </main>
+
+  <footer><div class="container">
+    <div class="footer-grid">
+      <div><a class="brand" href="#home" style="color:white"><span class="brand-mark">✚</span> HealthWise Hub</a><p>Helping people explore health knowledge, wellness habits and trusted educational resources for healthier communities worldwide. 🌍</p></div>
+      <div><h3>Explore</h3><a href="#topics">Health Topics</a><a href="#wellness">Everyday Wellness</a><a href="#resources">Trusted Resources</a><a href="#faq">FAQs</a></div>
+      <div><h3>Health Education</h3><a href="https://www.who.int/health-topics" target="_blank" rel="noopener">WHO Health Topics</a><a href="https://www.afro.who.int/" target="_blank" rel="noopener">WHO Africa</a><a href="https://health.gov.mw/" target="_blank" rel="noopener">Malawi Ministry of Health</a></div>
+      <div><h3>Our Commitment</h3><p>Accessible learning<br>Respectful information<br>Prevention awareness<br>Professional care matters</p></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> HealthWise Hub. For health education and awareness. 💚</div>
+  </div></footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Functional page enhancements; compatible with the project's separate script.js.
+    const menuBtn=document.getElementById('menuBtn');
+    const navlinks=document.getElementById('navlinks');
+    menuBtn?.addEventListener('click',()=>navlinks.classList.toggle('open'));
+    navlinks?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const search=document.getElementById('topicSearch');
+    const filter=document.getElementById('topicFilter');
+    const cards=[...document.querySelectorAll('.topic-card')];
+    function filterTopics(){
+      const q=(search.value||'').toLowerCase().trim(), cat=filter.value;let shown=0;
+      cards.forEach(card=>{const matchText=card.innerText.toLowerCase().includes(q);const matchCat=cat==='all'||card.dataset.category===cat;const visible=matchText&&matchCat;card.classList.toggle('hidden',!visible);if(visible)shown++;});
+      document.getElementById('noTopics').classList.toggle('hidden',shown!==0);
+    }
+    search?.addEventListener('input',filterTopics);filter?.addEventListener('change',filterTopics);
+    document.getElementById('newsletterForm')?.addEventListener('submit',e=>{
+      e.preventDefault();const email=document.getElementById('newsletterEmail').value;
+      alert('Thank you for your interest! Newsletter sign-up is a front-end demo. Connect an email marketing service to collect subscriptions.');
+      e.target.reset();
+    });
+    // Reveal sections as they enter the viewport.
+    if('IntersectionObserver' in window){
+      const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('reveal');observer.unobserve(entry.target);}}),{threshold:.08});
+      document.querySelectorAll('section .section-head, .topic-card, .well-card, .resource').forEach(el=>observer.observe(el));
+    }
+  </script>
+</body>
+</html>
